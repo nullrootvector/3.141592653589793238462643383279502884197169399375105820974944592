@@ -1,0 +1,51 @@
+{
+  "order": [
+    "1415",
+    "9265"
+  ],
+  "projects": {
+    "1415": {
+      "title": "Project Alpha: Small Project Repository",
+      "description": "This is a project repository for small projects that showcase various technologies and methodologies. We aim to demonstrate best practices in software development, including clean code, modular architecture, and efficient data handling.",
+      "techStack": [
+        "Linux",
+        "Docker",
+        "Web Programming",
+        "Systems Architecture"
+      ],
+      "githubUrl": "#",
+      "liveUrl": null,
+      "media": [
+        "https://placehold.co/800x500/1F2937/818CF8?text=Architecture+Diagram",
+        "https://placehold.co/800x500/1F2937/34D399?text=Database+Schema"
+      ],
+      "notes": {
+        "challenge": "Designing a database schema that was both normalized for data integrity and performant for complex, real-time queries.",
+        "solution": "Implemented a hybrid approach using standard relational tables for core data and a JSONB column in PostgreSQL for flexible, unstructured metadata.",
+        "learning": "This project reinforced the critical importance of domain-driven design and deeply understanding the trade-offs between normalization and query flexibility."
+      }
+    },
+    "9265": {
+      "title": "Project Beta: The Visualizer",
+      "description": "Building upon the Genesis Engine, this project is an interactive web application that visualizes complex data sets in real-time using only native browser technologies.",
+      "techStack": [
+        "Vanilla JS",
+        "HTML5 Canvas",
+        "WebSockets",
+        "UI/UX"
+      ],
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "media": [
+        "https://placehold.co/800x500/1F2937/E5E7EB?text=Live+Dashboard+UI",
+        "https://placehold.co/800x500/111827/9CA3AF?text=Canvas+Interaction",
+        "https://placehold.co/800x500/1F2937/FFFFFF?text=Mobile+Responsive+View"
+      ],
+      "notes": {
+        "challenge": "Rendering thousands of data points on an HTML5 canvas without compromising browser performance or responsiveness.",
+        "solution": "Utilized canvas layering and offscreen rendering, only redrawing elements that changed within the viewport. Throttled WebSocket events to prevent data overload.",
+        "learning": "A profound appreciation for the power of pure JavaScript for performance-critical tasks and the nuances of the browser rendering pipeline."
+      }
+    }
+  }
+}

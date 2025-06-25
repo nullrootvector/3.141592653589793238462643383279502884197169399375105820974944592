@@ -1,1359 +1,281 @@
-@page {
-    margin-bottom: 5pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 5pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0
-    }
+/* CSS Variables for easy theming and a modern look */
+:root {
+    --background-color: #111827; /* Dark blue-gray */
+    --surface-color: #1F2937;    /* Lighter gray for cards */
+    --primary-color: #818CF8;     /* Soft purple */
+    --secondary-color: #34D399;   /* Vibrant green */
+    --text-color: #E5E7EB;       /* Off-white */
+    --text-muted-color: #9CA3AF; /* Gray for subtitles */
+    --font-main: 'Inter', sans-serif;
+}
 
-.calibre {
-    background-color: white;
-    display: block;
-    font-size: 1.125em;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 5pt;
-    margin-right: 5pt;
-    margin-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-    page-break-before: always
-    }
-.calibre1 {
-    direction: ltr;
-    display: block;
-    font-size: 1.62963em;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
+/* Basic Reset and Body Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 2rem;
     text-align: center;
-    text-indent: 0
-    }
-.calibre2 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 1pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    text-indent: 2em
-    }
-.calibre3 {
-    display: block;
-    height: 0;
-    line-height: 1.2
-    }
-.calibre4 {
-    direction: ltr;
-    display: block;
-    font-size: 1.25926em;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 17.25pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    text-align: center;
-    text-indent: 0
-    }
-.calibre5 {
-    display: block;
-    line-height: 1.2;
-    page-break-after: always
-    }
-.calibre6 {
-    direction: ltr;
-    display: block;
-    font-size: 1.62963em;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    page-break-after: avoid;
-    page-break-before: avoid;
-    text-align: center;
-    text-indent: 0
-    }
-.calibre7 {
-    display: block;
-    font-size: 1em;
-    margin-bottom: 0;
-    margin-left: 5pt;
-    margin-right: 5pt;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center
-    }
-.calibre8 {
-    height: auto;
-    width: auto
-    }
-.calibreclass {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.calibreclass1 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 1.48148em;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.calibreclass2 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 1.09091em;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.calibreclass3 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 17.25pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    text-indent: 2em
-    }
-.calibreclass4 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 1.25926em;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.calibreclass5 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass6 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 1.48148em;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.2
-    }
-.calibreclass7 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 0.88889em;
-    font-style: normal;
-    font-weight: normal
-    }
-.calibreclass8 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass9 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 0.66667em;
-    font-style: normal;
-    font-weight: normal
-    }
-.calibreclass10 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    text-indent: 2em
-    }
-.calibreclass11 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 72pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass12 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 0.88889em;
-    font-style: italic;
-    font-weight: normal
-    }
-.calibreclass13 {
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.2
-    }
-.calibreclass14 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 181.5pt;
-    margin-right: 181.5pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass15 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass16 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 36pt;
-    margin-right: 37.5pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass17 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 1pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass18 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 72pt;
-    margin-right: 37.5pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass19 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 36pt;
-    margin-right: 37.5pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass20 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 36pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass21 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 72pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass22 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    text-indent: 2em
-    }
-.calibreclass23 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 1.48148em;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 26.1pt
-    }
-.calibreclass24 {
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 1.66667em;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.2
-    }
-.calibreclass25 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 36pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass26 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 36pt;
-    margin-right: 37.5pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass27 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 36pt;
-    margin-right: 38.25pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass28 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 0.66667em;
-    font-style: italic;
-    font-weight: normal
-    }
-.calibreclass29 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 14.25pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    text-indent: 2em
-    }
-.calibreclass30 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 36pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass31 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 1.48148em;
-    font-style: italic;
-    font-weight: normal;
-    line-height: 26.1pt
-    }
-.calibreclass32 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 72pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass33 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 1pt;
-    margin-left: 36pt;
-    margin-right: 37.5pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass34 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-size: 1.17647em;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.calibreclass35 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 44.25pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    text-indent: 2em
-    }
-.calibreclass36 {
-    border-bottom-color: currentColor;
-    border-bottom-style: inset;
-    border-bottom-width: 1px;
-    border-left-color: currentColor;
-    border-left-style: inset;
-    border-left-width: 1px;
-    border-right-color: currentColor;
-    border-right-style: inset;
-    border-right-width: 1px;
-    border-top-color: currentColor;
-    border-top-style: inset;
-    border-top-width: 1px;
-    color: gray;
-    display: block;
-    height: 2px;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.5em;
-    page-break-after: avoid;
-    page-break-before: avoid;
-    width: 0
-    }
-.calibreclass37 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 16.2pt;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass38 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 16.2pt;
-    margin-bottom: -3.75pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass39 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 72pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass40 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 72pt;
-    margin-right: 139.5pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass41 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    page-break-after: avoid;
-    page-break-before: avoid;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass42 {
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-style: italic;
-    font-weight: normal;
-    line-height: 1.2
-    }
-.calibreclass43 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 33pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 36pt
-    }
-.calibreclass44 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 36pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    text-indent: 2em
-    }
-.calibreclass45 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass46 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 3pt;
-    margin-left: 36pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass47 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 459pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: justify;
-    text-indent: 2em
-    }
-.calibreclass48 {
-    color: #000;
-    font-family: "DejaVu Sans", "Deja Vu Sans", sans-serif;
-    font-style: italic;
-    font-weight: normal;
-    line-height: 1.2
-    }
-.calibreclass49 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass50 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 459pt;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass51 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 36pt;
-    margin-right: 69pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass52 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 1pt;
-    margin-left: 36pt;
-    margin-right: 38.25pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass53 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 35.25pt;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    text-indent: 2em
-    }
-.calibreclass54 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 0;
-    margin-right: 251.25pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass55 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 12pt;
-    margin-left: 0;
-    margin-right: 290.25pt;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.calibreclass56 {
-    border-bottom-color: currentColor;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    border-left-color: currentColor;
-    border-left-style: none;
-    border-left-width: 0;
-    border-right-color: currentColor;
-    border-right-style: none;
-    border-right-width: 0;
-    border-top-color: currentColor;
-    border-top-style: none;
-    border-top-width: 0;
-    direction: ltr;
-    display: block;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1pt;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: left;
-    text-indent: 2em
-    }
-.part {
-    display: block;
-    line-height: 1.2
-    }
-.sect {
-    display: block;
-    line-height: 1.2;
-    page-break-after: avoid;
-    page-break-before: avoid
-    }
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    z-index: 1;
+}
 
-@page {
-    margin-bottom: 5pt;
-    margin-top: 5pt
-    }
+/* Animated Background Canvas */
+#pi-stream-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
+header, main, footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+h1 .pi-symbol {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+h1 .domain-name {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    color: var(--text-muted-color);
+    font-weight: 400;
+    display: block;
+    margin-top: 0.5rem;
+    word-break: break-all;
+}
+
+/* Project Grid */
+#pi-tapestry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pi-quartet {
+    background-color: var(--surface-color);
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    font-size: 1.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+    border: 1px solid #374151;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.pi-quartet:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3), 0 0 15px -3px var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer credits */
+footer {
+    margin-top: 5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted-color);
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Modal Styles --- */
+#modal-backdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(8px);
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#modal-backdrop.visible {
+    display: flex;
+    opacity: 1;
+}
+
+#project-modal {
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.95) translateY(10px);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid #374151;
+    text-align: left;
+}
+
+#modal-backdrop.visible #project-modal {
+    transform: scale(1) translateY(0);
+}
+
+#modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted-color);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+#modal-close-btn:hover {
+    color: var(--text-color);
+    transform: rotate(90deg);
+}
+
+/* Media Viewer (Carousel) Styles */
+#modal-media-viewer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: #111827;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+#modal-media-viewer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+#modal-media-viewer img.active {
+    opacity: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 5;
+    transition: background-color 0.2s ease;
+}
+.carousel-btn:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+#carousel-prev { left: 1rem; border-radius: 8px 0 0 8px; }
+#carousel-next { right: 1rem; border-radius: 0 8px 8px 0; }
+
+/* Modal Content Styles */
+#modal-title {
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+#modal-description {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Architect's Notes Styles */
+#modal-architect-notes {
+    margin: 2.5rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+}
+
+#modal-architect-notes h4 {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#modal-architect-notes p {
+    margin: 0 0 1.5rem 0;
+    color: var(--text-muted-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+#modal-tech-stack {
+    margin-bottom: 2rem;
+}
+
+#modal-tech-stack span {
+    display: inline-block;
+    background-color: #374151;
+    color: var(--secondary-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0.25rem;
+}
+
+#modal-links a {
+    background-color: var(--primary-color);
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    margin-right: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+#modal-links a:hover {
+    background-color: #A7B1FB;
+}
